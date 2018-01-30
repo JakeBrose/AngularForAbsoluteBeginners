@@ -20,7 +20,8 @@
 
         <ul class="add-todo">
             <li>
-                <input type="text" class="txt" placeholder="New Todo" />
+                <input type="text" class="txt" placeholder="New Todo"
+                    ng-model="newTodo" ng-keyup="add($event)" />
             </li>
         </ul>
 

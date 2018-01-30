@@ -9,6 +9,7 @@ app.controller('TodoCtrl', function($scope){
     // Adds a message to the scope.
     //  Needs to be added to the page. This is called data binding.
     $scope.message = 'Angular is pretty cool';
+    $scope.newTodo = '';
     $scope.todos = [
         'Learn to Sketch',
         'Look at Dribble and deel inferior',
@@ -21,4 +22,12 @@ app.controller('TodoCtrl', function($scope){
             $scope.todos.splice(indexOf,1);
         }
     };
+    $scope.add = function(e){
+        // e is the event, and 13 is the enter key
+        if (e.which && e.which === 13) {
+            $scope.todos.push($scope.newTodo)
+            // after the new todo is pushed into the array, we clear the 
+            $scope.newTodo = '';
+        }
+    }
 });
