@@ -9,4 +9,9 @@ app.controller('TodoCtrl', function($scope){
     // Adds a message to the scope.
     //  Needs to be added to the page. This is called data binding.
     $scope.message = 'Angular is pretty cool';
+    $scope.todos = [
+        'Learn to Sketch',
+        'Look at Dribble and deel inferior',
+        'Actually learn how to use the Pen tool'
+    ];
 });
